@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+
+<body class="body_login">
+
+
+  <div class="login_box">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="log_inContent">
+            <h3>Detection Game</h3>
+            <form action="face.html">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input required type="text" name="name" id="name" class="form-control name_input"
+                  placeholder="Type Your Name ....">
+              </div>
+
+              <div class="form-group">
+                <label for="age" class="form-label">Age</label>
+                <input required type="text" name="age" id="age" class="form-control age"
+                  placeholder="Type Your Age ....">
+              </div>
+              <div class="form-group">
+                <label for="Gender" class="form-label d-block">Gender</label>
+                <select required class="select2 w-100" name="state" style="height: 38px;">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <div class="form-group text-end">
+                <button disabled class="btn btn-secondary playMassgeClick" type="submit">Done</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=g4QgbHcM"></script>
+  <script src="./js/min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    });
+
+
+    $(".form-control").keyup(function (e) {
+
+      if ($(".name_input").val() !== "" && $(".age").val() !== "") {
+        $(".playMassgeClick").attr("disabled", false)
+      }
+
+    });
+
+    $(".playMassgeClick").click(function () {
+      name = $(".name_input").val();
+      massege = `welcom ${name} Start Your Journey , Have A nice time`;
+      responsiveVoice.speak(massege, "UK English Male");
+    })
+
+
+  </script>
+</body>
+
+</html>
