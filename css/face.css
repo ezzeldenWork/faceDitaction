@@ -92,80 +92,9 @@ body {
   position: relative;
   left: 0;
   top: 0;
-}
-
-.logo {
-  bottom: 10px;
-  right: 20px;
-}
-
-.logo .title {
-  color: white;
-  font-size: 28px;
-}
-
-.logo .subtitle {
-  position: relative;
-  color: white;
-  font-size: 10px;
-  left: -30px;
-  top: 20px;
-}
-
-.control-panel {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
-.loading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-.loading .message {
-  font-size: x-large;
-}
-
-.loading .spinner {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-  border: 32px solid #bebebe;
-  border-top: 32px solid #3498db;
-  border-radius: 50%;
-}
-
-.loaded .loading {
-  opacity: 0;
-}
-
-.shoutout {
-  left: 0;
-  right: 0;
-  bottom: 40px;
-  text-align: center;
-  font-size: 24px;
-  position: absolute;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .links {
